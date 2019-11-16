@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(82,82,82,1) 0%, rgba(69,102,142,1) 0%, rgba(61,114,180,1) 100%);
+}
+
+
+
+#footer{
+    position: fixed;
+    text-align: center;
+    border: red;
+    background: yellow;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+#heder{
+    position: fixed;
+    border: red;
+    background: yellow;
+    width: 100%;
+}
