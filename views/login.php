@@ -14,7 +14,7 @@
         Login:
         <input type="text" placeholder="Twój login...">
         Hasło:
-        <input type="text" placeholder="Twoje hasło...">
+        <input type="password" placeholder="Twoje hasło...">
         <button type="button">Zaloguj się</button>
     </form>
     <div>

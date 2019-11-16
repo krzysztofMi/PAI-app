@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../../resource/style.css">
-</head>
-<body>
-<?php include "fragment/header.php" ?>
-
-<?php include "fragment/foot.php" ?>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../../resource/style.css">
+    </head>
+    <body>
+        <?php include "fragment/header.php" ?>
+        <div>
+            <h1>Rejestracja</h1>
+        </div>
+        <form>
+            Login:
+            <input type="text">
+            Email:
+            <input type="email">
+            Hasło:
+            <input type="password">
+            Powtórz hasło:
+            <input type="password">
+            <button type="button">Zarejestruj się</button>
+        </form>
+        <div>
+            <a href="index.php"><button>Powrót</button></a>
+        </div>
+        <div>
+            <a href="login.php"><button>Nie masz konta? Zaloguj się!</button></a>
+        </div>
+        <?php include "fragment/foot.php" ?>
+    </body>
 </html>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
