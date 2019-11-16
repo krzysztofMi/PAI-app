@@ -8,18 +8,17 @@
     </head>
     <body>
         <?php include "fragment/header.php" ?>
+        <nav>
+            Obraski
+        </nav>
         <article>
             <div>
-                <img src="../resource/img/logo.svg"
+                <h1>Nazwa</h1>
+                <p>Opis</p>
+                <a href="atractionView.php"><button>Sprawdź</button></a>
             </div>
             <div>
-                <a href="login.php"><button>Zaloguj się.</button></a>
-            </div>
-            <div>
-                <a href="register.php"><button>Zarejestruj się.</button></a>
-            </div>
-            <div>
-                <a href="city.php"><button>Kontynuuj bez logowania.</button></a>
+                <a href="atraction.php"><button>Powrót</button></a>
             </div>
         </article>
         <?php include "fragment/foot.php" ?>

@@ -8,23 +8,29 @@
     </head>
     <body>
         <?php include "fragment/header.php" ?>
-        <article>
             <div>
-                <img src="../resource/img/logo.svg"
+                <div>
+                    <nav>
+                        <p>Wybierz miasto które cię interesuje<p>
+                        <button>Kraków</button>
+                        <button>Warszawa</button>
+                        <button>Gdańsk</button>
+                        <button>Wrocław</button>
+                        <button>Łódź</button>
+                    </nav>
+                </div>
+                <article>
+                    <div>
+                        <div>
+                            Lorem ipsum
+                        </div>
+                        <a href="atraction.php"><button>Dalej</button></a>
+                    </div>
+                </article>
             </div>
-            <div>
-                <a href="login.php"><button>Zaloguj się.</button></a>
-            </div>
-            <div>
-                <a href="register.php"><button>Zarejestruj się.</button></a>
-            </div>
-            <div>
-                <a href="city.php"><button>Kontynuuj bez logowania.</button></a>
-            </div>
-        </article>
         <?php include "fragment/foot.php" ?>
     </body>
-</html>
+    </html>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

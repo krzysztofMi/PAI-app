@@ -9,17 +9,11 @@
     <body>
         <?php include "fragment/header.php" ?>
         <article>
+            <h1>Kod błędu</h1>
+            <p1>coś poszło nie tak</p1>
+            <button>Powrót na strone główną</button>
             <div>
-                <img src="../resource/img/logo.svg"
-            </div>
-            <div>
-                <a href="login.php"><button>Zaloguj się.</button></a>
-            </div>
-            <div>
-                <a href="register.php"><button>Zarejestruj się.</button></a>
-            </div>
-            <div>
-                <a href="city.php"><button>Kontynuuj bez logowania.</button></a>
+                Skontaktuj się z nami w celu naprawy tego błędu.
             </div>
         </article>
         <?php include "fragment/foot.php" ?>

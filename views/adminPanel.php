@@ -8,19 +8,14 @@
     </head>
     <body>
         <?php include "fragment/header.php" ?>
+        <nav>
+            <button>Społeczność</button>
+            <button>Zawartość</button>
+            <button>Pomoc</button>
+            <button>Ogłoszenia</button>
+        </nav>
         <article>
-            <div>
-                <img src="../resource/img/logo.svg"
-            </div>
-            <div>
-                <a href="login.php"><button>Zaloguj się.</button></a>
-            </div>
-            <div>
-                <a href="register.php"><button>Zarejestruj się.</button></a>
-            </div>
-            <div>
-                <a href="city.php"><button>Kontynuuj bez logowania.</button></a>
-            </div>
+            Zawartość poszczególnych fragmentów.
         </article>
         <?php include "fragment/foot.php" ?>
     </body>

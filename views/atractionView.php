@@ -10,17 +10,35 @@
         <?php include "fragment/header.php" ?>
         <article>
             <div>
-                <img src="../resource/img/logo.svg"
+                <section>
+                    Nazwa atrakcji
+                </section>
+                <section>
+                    <button>Opis</button>
+                    <button>Ceny</button>
+                    <button>Położenie</button>
+                    <div>
+                        <p></p>
+                        <div>
+                            Link do strony.
+                            <button>Oceń</button>
+                            <img src="../resource/img/heart.svg">
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div>
-                <a href="login.php"><button>Zaloguj się.</button></a>
-            </div>
-            <div>
-                <a href="register.php"><button>Zarejestruj się.</button></a>
-            </div>
-            <div>
-                <a href="city.php"><button>Kontynuuj bez logowania.</button></a>
-            </div>
+            <section>
+                Obraski
+            </section>
+            <section>
+                <p>Autor</p>
+                <div>
+                    Komentarz
+                </div>
+                <div>
+                    Ocena
+                </div>
+            </section>
         </article>
         <?php include "fragment/foot.php" ?>
     </body>

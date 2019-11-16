@@ -7,9 +7,9 @@
     </head>
     <body>
     <footer>
-        <div id="footer">
-            TOURISMUS
-        </div>
+<!--        <div id="footer">-->
+<!--            TOURISMUS-->
+<!--        </div>-->
     </footer>
     </body>
 </html>

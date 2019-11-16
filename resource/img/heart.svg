@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="87" height="86" viewBox="0 0 87 86">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: red;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Heart" transform="translate(0.5)">
+    <path id="Heart-2" data-name="Heart" class="cls-1" d="M79.15,6.9a23.107,23.107,0,0,0-32.89,0l-3.235,3.235L39.79,6.9A23.257,23.257,0,0,0,6.9,39.79L43.025,75.915,79.15,39.79a23.107,23.107,0,0,0,0-32.89" transform="translate(-0.025 0.975)"/>
+    <rect id="Rectangle_1450" data-name="Rectangle 1450" class="cls-2" width="86" height="86" transform="translate(0)"/>
+  </g>
+</svg>

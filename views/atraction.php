@@ -8,20 +8,13 @@
     </head>
     <body>
         <?php include "fragment/header.php" ?>
-        <article>
-            <div>
-                <img src="../resource/img/logo.svg"
-            </div>
-            <div>
-                <a href="login.php"><button>Zaloguj się.</button></a>
-            </div>
-            <div>
-                <a href="register.php"><button>Zarejestruj się.</button></a>
-            </div>
-            <div>
-                <a href="city.php"><button>Kontynuuj bez logowania.</button></a>
-            </div>
-        </article>
+        <div>Jesteś w XXXXX</div>
+        <nav>
+            <a href="atractionSelect.php"><button>Hotele</button></a>
+            <a href="atractionSelect.php"><button>Restauracje</button>
+            <a href="atractionSelect.php"><button>Zabytki</button></a>
+            <a href="city.php"><button>Wybierz miasto</button></a>
+        </nav>
         <?php include "fragment/foot.php" ?>
     </body>
 </html>
