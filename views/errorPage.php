@@ -16,7 +16,7 @@
                 Skontaktuj się z nami w celu naprawy tego błędu.
             </div>
         </article>
-        <?php include "fragment/foot.php" ?>
+        <?php include "fragment/footer.php" ?>
     </body>
 </html>
 

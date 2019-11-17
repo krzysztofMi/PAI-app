@@ -8,21 +8,20 @@
     </head>
     <body>
         <?php include "fragment/header.php" ?>
-        <article>
-            <div>
-                <img src="../resource/img/logo.svg"
+        <article class="container">
+            <div class="logo">
+                <img src="../resource/img/logo.svg">
             </div>
-            <div>
-                <a href="login.php"><button>Zaloguj się.</button></a>
-            </div>
-            <div>
-                <a href="register.php"><button>Zarejestruj się.</button></a>
-            </div>
-            <div>
-                <a href="city.php"><button>Kontynuuj bez logowania.</button></a>
+            <div class="buttons">
+                <div>
+                    <a href="login.php"><button class="button-yellow button-go-down">Zaloguj się</button></a>
+                </div>
+                <div>
+                    <a href="register.php"><button class="button-yellow">Zarejestruj się</button></a>
+                </div>
             </div>
         </article>
-        <?php include "fragment/foot.php" ?>
+        <?php include "fragment/footer.php" ?>
     </body>
 </html>
 

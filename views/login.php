@@ -23,6 +23,6 @@
     <div>
         <a href="register.php"><button>Nie masz konta? Zarejestruj się!</button></a>
     </div>
-<?php include "fragment/foot.php" ?>
+<?php include "fragment/footer.php" ?>
 </body>
 </html>

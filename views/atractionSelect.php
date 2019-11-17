@@ -21,7 +21,7 @@
                 <a href="atraction.php"><button>Powrót</button></a>
             </div>
         </article>
-        <?php include "fragment/foot.php" ?>
+        <?php include "fragment/footer.php" ?>
     </body>
 </html>
 

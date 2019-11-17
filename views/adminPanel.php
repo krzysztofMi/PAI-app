@@ -17,7 +17,7 @@
         <article>
             Zawartość poszczególnych fragmentów.
         </article>
-        <?php include "fragment/foot.php" ?>
+        <?php include "fragment/footer.php" ?>
     </body>
 </html>
 

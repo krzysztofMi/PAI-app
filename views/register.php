@@ -28,7 +28,7 @@
         <div>
             <a href="login.php"><button>Nie masz konta? Zaloguj się!</button></a>
         </div>
-        <?php include "fragment/foot.php" ?>
+        <?php include "fragment/footer.php" ?>
     </body>
 </html>
 

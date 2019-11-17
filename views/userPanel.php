@@ -52,7 +52,7 @@
                 Panel z otwartą zakładką.
             </section>
         </article>
-        <?php include "fragment/foot.php" ?>
+        <?php include "fragment/footer.php" ?>
     </body>
     </html>
 

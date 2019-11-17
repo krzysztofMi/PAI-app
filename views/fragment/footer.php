@@ -6,10 +6,8 @@
         <link rel="stylesheet" type="text/css" href="../../resource/style.css">
     </head>
     <body>
-    <footer>
-<!--        <div id="footer">-->
-<!--            TOURISMUS-->
-<!--        </div>-->
+    <footer id="footer">
+            TOURISMUS
     </footer>
     </body>
 </html>

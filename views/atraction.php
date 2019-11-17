@@ -15,7 +15,7 @@
             <a href="atractionSelect.php"><button>Zabytki</button></a>
             <a href="city.php"><button>Wybierz miasto</button></a>
         </nav>
-        <?php include "fragment/foot.php" ?>
+        <?php include "fragment/footer.php" ?>
     </body>
 </html>
 
