@@ -1,0 +1,37 @@
+.verticalContainer{
+    margin: 0;
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+form>input{
+    margin-bottom: 1em;
+}
+
+form+a{
+    margin-top: 0.5em;
+}
+
+.underline-header{
+    margin-top: 3em;
+    border-bottom: solid 5px black;
+    width: 90%;
+    margin-bottom: 3em;
+}
+
+.underline-header>h1{
+    font-size: 90px;
+}
+
+
+
+
