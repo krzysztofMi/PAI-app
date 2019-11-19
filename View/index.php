@@ -14,10 +14,10 @@
             </div>
             <div class="buttons">
                 <div>
-                    <a href="login.php"><button class="button-yellow button-go-down">Zaloguj się</button></a>
+                    <a href="?page=login"><button class="button-yellow button-go-down">Zaloguj się</button></a>
                 </div>
                 <div>
-                    <a href="register.php"><button class="button-yellow">Zarejestruj się</button></a>
+                    <a href="?page=register"><button class="button-yellow">Zarejestruj się</button></a>
                 </div>
             </div>
         </article>

@@ -110,7 +110,7 @@ body{
     }
     .container {
         flex-direction: column;
-        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
     }
 
     .buttons{

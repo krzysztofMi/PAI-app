@@ -12,18 +12,18 @@
             <div class="underline-header">
                 <h1>Rejestracja</h1>
             </div>
-            <form>
+            <form action="?=register" method="POST">
                 Login:
-                <input type="text">
+                <input name="login" type="text">
                 Email:
-                <input type="email">
+                <input name="email" type="email">
                 Hasło:
-                <input type="password">
+                <input name="password" type="password">
                 Powtórz hasło:
-                <input type="password">
+                <input name="password" type="password">
                 <button type="button" class="button-yellow">Zarejestruj się</button>
             </form>
-            <a style="width: 50%;" href="login.php">
+            <a style="width: 50%;" href="?page=login">
                 <button class="button-yellow">Nie masz konta? Zaloguj się!</button>
             </a>
         </div>

@@ -84,6 +84,7 @@ form+a{
     }
     .container {
         flex-direction: column;
+        -webkit-overflow-scrolling: touch;
     }
 
     .buttons{

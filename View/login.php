@@ -19,7 +19,7 @@
             <input type="password" placeholder="Twoje hasło...">
             <button type="button" class="button-yellow">Zaloguj się</button>
         </form>
-        <a href="register.php" style="width: 50%">
+        <a href="?page=register" style="width: 50%">
             <button class="button-yellow">Nie masz konta? Zarejestruj się!</button>
         </a>
     </div>
