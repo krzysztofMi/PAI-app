@@ -13,11 +13,11 @@
 
                 <nav class="cityView">
                     <p style="text-align: center">Wybierz miasto które cię interesuje</p>
-                    <button class="button-yellow-hight">Kraków</button>
-                    <button class="button-yellow-hight">Warszawa</button>
-                    <button class="button-yellow-hight">Gdańsk</button>
-                    <button class="button-yellow-hight">Wrocław</button>
-                    <button class="button-yellow-hight">Łódź</button>
+                    <button class="button-yellow-height">Kraków</button>
+                    <button class="button-yellow-height">Warszawa</button>
+                    <button class="button-yellow-height">Gdańsk</button>
+                    <button class="button-yellow-height">Wrocław</button>
+                    <button class="button-yellow-height">Łódź</button>
 
                 </nav>
                 <article>
@@ -26,7 +26,7 @@
                             <h1 style="text-align: center">Lorem ipsum</h1>
                             <p>DesaesalehahelsaheDesaesalehahelsaheDesaesalehahelsaheDesaesalehahelsahe</p>
                         </div>
-                        <a href="atraction.php" class="flexCenter"><button class="button-yellow button-rounder">Dalej</button></a>
+                        <a href="?page=attraction" class="flexCenter"><button class="button-yellow button-rounder">Dalej</button></a>
                     </div>
                 </article>
             </div>

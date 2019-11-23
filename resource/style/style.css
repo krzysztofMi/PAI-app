@@ -39,6 +39,17 @@ body{
     padding-bottom: 1.5em;
 }
 
+.verticalContainer{
+    margin: 0;
+    max-width: unset;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(82,82,82,1) 0%, rgba(69,102,142,1) 0%, rgba(61,114,180,1) 100%);
+    padding-bottom: 1.5em;
+}
+
 .logo{
     display: flex;
     flex-direction: column;
@@ -50,6 +61,15 @@ body{
     flex-direction: column;
     padding: 2em;
 }
+
+nav.buttons>a>button{
+    margin-bottom: 2em;
+}
+
+#left-corner{
+    padding-bottom: 23em;
+}
+
 
 .button-yellow{
     background: #FFEA00;
@@ -68,7 +88,7 @@ body{
     height: 4em;
 }
 
-.button-yellow-hight{
+.button-yellow-height{
     background: #FFEA00;
     color: #6809B8;
     width: 100%;

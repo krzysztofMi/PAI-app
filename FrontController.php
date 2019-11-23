@@ -4,6 +4,8 @@ require_once 'Controller/IndexController.php';
 require_once 'Controller/LoginController.php';
 require_once 'Controller/RegistrationController.php';
 require_once 'Controller/CityController.php';
+require_once 'Controller/AttractionController.php';
+require_once 'Controller/AttractionSelectionController.php';
 
 class FrontController{
 
@@ -14,7 +16,9 @@ class FrontController{
             'index' => ['controller' => 'IndexController', 'action' => 'home'],
             'login' => ['controller' => 'LoginController', 'action' => 'login'],
             'register' => ['controller' => 'RegistrationController', 'action' => 'register'],
-            'city' => ['controller' => 'CityController', 'action' => 'showCity']
+            'city' => ['controller' => 'CityController', 'action' => 'showCity'],
+            'attraction' => ['controller' => 'AttractionController', 'action' => 'showAttractionsType'],
+            'attraction/selector' => ['controller' => 'AttractionSelectorController', 'action' => 'showAttractions']
         ];
     }
 

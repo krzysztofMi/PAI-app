@@ -8,13 +8,19 @@
     </head>
     <body>
         <?php include "fragment/header.php" ?>
-        <div>Jesteś w XXXXX</div>
         <nav>
-            <a href="atractionSelect.php"><button>Hotele</button></a>
-            <a href="atractionSelect.php"><button>Restauracje</button>
-            <a href="atractionSelect.php"><button>Zabytki</button></a>
-            <a href="city.php"><button>Wybierz miasto</button></a>
+            Obraski
         </nav>
+        <article>
+            <div>
+                <h1>Nazwa</h1>
+                <p>Opis</p>
+                <a href="attractionView.php"><button>Sprawdź</button></a>
+            </div>
+            <div>
+                <a href="attraction.php"><button>Powrót</button></a>
+            </div>
+        </article>
         <?php include "fragment/footer.php" ?>
     </body>
 </html>

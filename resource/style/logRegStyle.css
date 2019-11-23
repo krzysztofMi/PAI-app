@@ -2,17 +2,6 @@ body{
     position: center;
 }
 
-.verticalContainer{
-    margin: 0;
-    max-width: unset;
-    display: flex;
-    flex-direction: column;
-    height: inherit;
-    align-items: center;
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(82,82,82,1) 0%, rgba(69,102,142,1) 0%, rgba(61,114,180,1) 100%);
-    padding-bottom: 1.5em;
-}
-
 form{
     display: flex;
     flex-direction: column;
