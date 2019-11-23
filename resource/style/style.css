@@ -54,9 +54,26 @@ body{
 .button-yellow{
     background: #FFEA00;
     color: #6809B8;
-    border-radius: 0.6em;
-    border-color: red;
     width: 100%;
+    border-color: red;
+}
+
+.button-round{
+    border-radius: 0.6em;
+}
+
+.button-rounder{
+    border-radius: 2em;
+    width: 50%;
+    height: 4em;
+}
+
+.button-yellow-hight{
+    background: #FFEA00;
+    color: #6809B8;
+    width: 100%;
+    border-color: red;
+    height: 3em;
 }
 
 .button-go-down{
@@ -67,6 +84,12 @@ body{
     color: red;
     font-size: 2em;
     text-align: center;
+}
+
+.flexCenter{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 1080px){

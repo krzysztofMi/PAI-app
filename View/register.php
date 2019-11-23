@@ -21,10 +21,10 @@
                 <input name="password" type="password">
                 Powtórz hasło:
                 <input name="password" type="password">
-                <button type="submit" class="button-yellow">Zarejestruj się</button>
+                <button type="submit" class="button-yellow button-round">Zarejestruj się</button>
             </form>
             <a style="width: 50%;" href="?page=login">
-                <button class="button-yellow">Nie masz konta? Zaloguj się!</button>
+                <button class="button-yellow button-round">Nie masz konta? Zaloguj się!</button>
             </a>
         </div>
         <?php include "fragment/footer.php" ?>

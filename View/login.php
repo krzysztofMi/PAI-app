@@ -24,10 +24,10 @@
             <input name="login" type="text" placeholder="Twój login...">
             Hasło:
             <input name="password" type="password" placeholder="Twoje hasło...">
-            <button type="submit" class="button-yellow">Zaloguj się</button>
+            <button type="submit" class="button-yellow button-round">Zaloguj się</button>
         </form>
         <a href="?page=register" style="width: 50%">
-            <button class="button-yellow">Nie masz konta? Zarejestruj się!</button>
+            <button class="button-yellow button-round">Nie masz konta? Zarejestruj się!</button>
         </a>
     </div>
 <?php include "fragment/footer.php" ?>

@@ -1,0 +1,25 @@
+.cityView{
+    width: 45%;
+    margin-right: 5em;
+    margin-bottom: 5em;
+}
+
+.cityView>button{
+    margin-bottom: 1.5em;
+}
+
+.cityView>p{
+}
+
+.cityDescription{
+    border-radius: 2em;
+    margin-bottom: 1em;
+    min-height: 12em;
+    min-width: 20em;
+    max-width: 20em;
+    background: #FFFF56;
+    border: solid 2px black;
+    text-align: justify;
+    word-wrap: break-word;
+}
+

@@ -4,27 +4,29 @@
         <meta charset="UTF-8">
         <title>Title</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="../../resource/style.css">
+        <link rel="stylesheet" type="text/css" href="../resource/style/style.css">
+        <link rel="stylesheet" type="text/css" href="../resource/style/city.css">
     </head>
     <body>
         <?php include "fragment/header.php" ?>
-            <div>
-                <div>
-                    <nav>
-                        <p>Wybierz miasto które cię interesuje<p>
-                        <button>Kraków</button>
-                        <button>Warszawa</button>
-                        <button>Gdańsk</button>
-                        <button>Wrocław</button>
-                        <button>Łódź</button>
-                    </nav>
-                </div>
+            <div class="container">
+
+                <nav class="cityView">
+                    <p style="text-align: center">Wybierz miasto które cię interesuje</p>
+                    <button class="button-yellow-hight">Kraków</button>
+                    <button class="button-yellow-hight">Warszawa</button>
+                    <button class="button-yellow-hight">Gdańsk</button>
+                    <button class="button-yellow-hight">Wrocław</button>
+                    <button class="button-yellow-hight">Łódź</button>
+
+                </nav>
                 <article>
                     <div>
-                        <div>
-                            Lorem ipsum
+                        <div class="cityDescription">
+                            <h1 style="text-align: center">Lorem ipsum</h1>
+                            <p>DesaesalehahelsaheDesaesalehahelsaheDesaesalehahelsaheDesaesalehahelsahe</p>
                         </div>
-                        <a href="atraction.php"><button>Dalej</button></a>
+                        <a href="atraction.php" class="flexCenter"><button class="button-yellow button-rounder">Dalej</button></a>
                     </div>
                 </article>
             </div>
