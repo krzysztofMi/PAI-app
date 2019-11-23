@@ -14,7 +14,7 @@ class FrontController{
             'index' => ['controller' => 'IndexController', 'action' => 'home'],
             'login' => ['controller' => 'LoginController', 'action' => 'login'],
             'register' => ['controller' => 'RegistrationController', 'action' => 'register'],
-            'city' => ['controller' => 'CityController', 'action' => 'city']
+            'city' => ['controller' => 'CityController', 'action' => 'showCity']
         ];
     }
 

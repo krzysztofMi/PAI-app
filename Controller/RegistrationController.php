@@ -12,12 +12,12 @@ class RegistrationController extends ApplicationController {
             $hashPassword = password_hash($_POST['password'], PASSWORD_BCRYPT);
             $hashRePassword = password_hash($_POST['repassword'], PASSWORD_BCRYPT);
 
+            //Veryfi credentionals
             if(password_verify($_POST['password'], $hashPassword) !== password_verify($_POST['repassword'], $hashRePassword)){
-                //error message
+
             }
             $user = new User($login, $email, $hashPassword);
-
-            //SAVE TO DB;
+            //SAVE TO DB ;
 
             $url = "http://$_SERVER[HTTP_HOST]/";
             header("Location: {$url}?page=login");

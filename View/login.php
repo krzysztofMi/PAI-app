@@ -12,12 +12,19 @@
         <div class="underline-header">
             <h1>Logowanie</h1>
         </div>
-        <form>
+        <form action="?page=login" method="POST">
+            <div class="message">
+                <?php
+                if(isset($loginMessage)){
+                    echo $loginMessage;
+                }
+                ?>
+            </div>
             Login:
-            <input type="text" placeholder="Twój login...">
+            <input name="login" type="text" placeholder="Twój login...">
             Hasło:
-            <input type="password" placeholder="Twoje hasło...">
-            <button type="button" class="button-yellow">Zaloguj się</button>
+            <input name="password" type="password" placeholder="Twoje hasło...">
+            <button type="submit" class="button-yellow">Zaloguj się</button>
         </form>
         <a href="?page=register" style="width: 50%">
             <button class="button-yellow">Nie masz konta? Zarejestruj się!</button>
