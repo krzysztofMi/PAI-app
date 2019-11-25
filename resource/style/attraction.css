@@ -1,0 +1,30 @@
+
+
+.image-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    margin: 1.5em;
+}
+
+.wrapper>button{
+    background: #FFEA00;
+}
+
+.wrapper>button>img{
+    width: 12em;
+    height: 9em;
+}
+
+.attraction-name{
+    text-align: center;
+    background: #F7FF87;
+}
+
+#position-down{
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    margin-left: -5.2em;
+    margin-bottom: 0.5em;
+}

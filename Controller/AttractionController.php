@@ -7,5 +7,3 @@ class AttractionController extends ApplicationController
         $this->render("attraction");
     }
 }
-
-?>

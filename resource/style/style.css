@@ -78,6 +78,10 @@ nav.buttons>a>button{
     border-color: red;
 }
 
+.black-border{
+    border-color: black;
+}
+
 .button-round{
     border-radius: 0.6em;
 }
@@ -110,6 +114,19 @@ nav.buttons>a>button{
     display: flex;
     justify-items: center;
     justify-content: center;
+}
+
+.information{
+    position: relative;
+    border-radius: 2em;
+    margin-bottom: 1em;
+    min-height: 16em;
+    min-width: 22em;
+    max-width: 20em;
+    background: #FFFF56;
+    border: solid 2px black;
+    word-wrap: break-word;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1080px){

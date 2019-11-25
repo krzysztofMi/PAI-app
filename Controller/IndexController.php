@@ -8,5 +8,3 @@ class IndexController extends ApplicationController {
     }
 
 }
-
-?>

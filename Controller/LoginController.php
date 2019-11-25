@@ -40,5 +40,3 @@ class LoginController extends ApplicationController {
         $this->render('index', $message->getMessage());
     }
 }
-
-?>

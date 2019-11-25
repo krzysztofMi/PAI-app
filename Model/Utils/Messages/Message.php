@@ -15,4 +15,3 @@ class Message{
     public function getMessage() : array { return [$this->type => $this->text]; }
 
 }
-?>

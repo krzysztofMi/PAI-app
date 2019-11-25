@@ -24,7 +24,7 @@
                 </nav>
                 <article>
                     <div>
-                        <div class="cityDescription">
+                        <div class="information">
                             <h1 style="text-align: center">
                                 <?php
                                     if(isset($_POST['cityButton'])) {

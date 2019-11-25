@@ -6,5 +6,3 @@ class CityController extends ApplicationController {
         $this->render("city");
     }
 }
-
-?>

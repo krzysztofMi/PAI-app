@@ -15,5 +15,3 @@ class LoginMessage extends Message{
 
 
 }
-?>
-

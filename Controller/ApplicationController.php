@@ -25,5 +25,3 @@ class ApplicationController{
         print $output;
     }
 };
-
-?>
