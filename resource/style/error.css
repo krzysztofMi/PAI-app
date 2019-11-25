@@ -1,0 +1,18 @@
+bigger-font{
+
+}
+
+
+#error-code{
+    margin-top: 0.4em;
+    color:white;
+    font-size: 200px;
+    margin-bottom: 0.2em;
+}
+
+
+#information-panel{
+    margin-top: 1.5em;
+    width: 80%;
+    background: #FFEA00;
+}

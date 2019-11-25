@@ -78,6 +78,13 @@ nav.buttons>a>button{
     border-color: red;
 }
 
+.button-yellow-smaller{
+    background: #FFEA00;
+    color: #6809B8;
+    width: 50%;
+    border-color: red;
+}
+
 .button-round{
     border-radius: 0.6em;
 }

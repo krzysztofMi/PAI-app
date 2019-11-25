@@ -7,3 +7,5 @@ class AttractionSelectionController extends ApplicationController{
         $this->render("attractionSelect");
     }
 }
+
+?>

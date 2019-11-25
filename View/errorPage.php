@@ -4,15 +4,16 @@
         <meta charset="UTF-8">
         <title>Title</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="../../resource/style.css">
+        <link rel="stylesheet" type="text/css" href="../resource/style/style.css">
+        <link rel="stylesheet" type="text/css" href="../resource/style/error.css">
     </head>
     <body>
         <?php include "fragment/header.php" ?>
-        <article>
-            <h1>Kod błędu</h1>
+        <article class="verticalContainer">
+            <h1 id="error-code">Kod błędu</h1>
             <p1>coś poszło nie tak</p1>
-            <button>Powrót na strone główną</button>
-            <div>
+            <button class="button-yellow-smaller">Powrót na strone główną</button>
+            <div id="information-panel"">
                 Skontaktuj się z nami w celu naprawy tego błędu.
             </div>
         </article>
