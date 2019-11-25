@@ -4,11 +4,11 @@
     margin-bottom: 5em;
 }
 
-.cityView>button{
-    margin-bottom: 1.5em;
+.cityView>p{
 }
 
-.cityView>p{
+form>input{
+    margin-bottom: 1.5em;
 }
 
 .cityDescription{

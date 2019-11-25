@@ -10,12 +10,12 @@
         <?php include "fragment/header.php" ?>
         <div class="container">
             <div id = left-corner>
-                <p style="border-bottom: solid 3px black">Jesteś w XXXXX</p>
+                <p style="border-bottom: solid 3px black">Jesteś w <?php echo $_SESSION['city'] ?></p>
             </div>
             <nav class="buttons">
-                <a href="attractionSelect.php"><button class="button-yellow-height">Hotele</button></a>
-                <a href="attractionSelect.php"><button class="button-yellow-height">Restauracje</button>
-                <a href="attractionSelect.php"><button class="button-yellow-height">Zabytki</button></a>
+                <a href="?page=attraction/select"><button class="button-yellow-height">Hotele</button></a>
+                <a href="?page=attraction/select"><button class="button-yellow-height">Restauracje</button>
+                <a href="?page=attraction/select"><button class="button-yellow-height">Zabytki</button></a>
                 <a href="?page=city"><button class="button-yellow-height">Wybierz miasto</button></a>
             </nav>
         </div>

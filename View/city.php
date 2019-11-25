@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
@@ -13,17 +13,27 @@
 
                 <nav class="cityView">
                     <p style="text-align: center">Wybierz miasto które cię interesuje</p>
-                    <button class="button-yellow-height">Kraków</button>
-                    <button class="button-yellow-height">Warszawa</button>
-                    <button class="button-yellow-height">Gdańsk</button>
-                    <button class="button-yellow-height">Wrocław</button>
-                    <button class="button-yellow-height">Łódź</button>
-
+                    <form action="" method="POST">
+                        <input type="submit" value="Kraków" class="button-yellow-height" name="cityButton">
+                        <input type="submit" value="Warszawa" class="button-yellow-height" name="cityButton">
+                        <input type="submit" value="Gdańsk" class="button-yellow-height" name="cityButton">
+                        <input type="submit" value="Wrocław" class="button-yellow-height" name="cityButton">
+                        <input type="submit" value="Łódź" class="button-yellow-height" name="cityButton">
+                    </form>
                 </nav>
                 <article>
                     <div>
                         <div class="cityDescription">
-                            <h1 style="text-align: center">Lorem ipsum</h1>
+                            <h1 style="text-align: center">
+                                <?php
+                                    if(isset($_POST['cityButton'])) {
+                                        $_SESSION['city'] = $_POST["cityButton"];
+                                        echo $_POST["cityButton"];}
+                                    else{
+                                        echo "Miasto";
+                                    }
+                                 ?>
+                            </h1>
                             <p>DesaesalehahelsaheDesaesalehahelsaheDesaesalehahelsaheDesaesalehahelsahe</p>
                         </div>
                         <a href="?page=attraction" class="flexCenter"><button class="button-yellow button-rounder">Dalej</button></a>

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Title</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="../../resource/style.css">
+        <link rel="stylesheet" type="text/css" href="../resource/style/style.css">
     </head>
     <body>
         <?php include "fragment/header.php" ?>
@@ -15,10 +15,10 @@
             <div>
                 <h1>Nazwa</h1>
                 <p>Opis</p>
-                <a href="attractionView.php"><button>Sprawdź</button></a>
+                <a href="?page=attraction/view"><button>Sprawdź</button></a>
             </div>
             <div>
-                <a href="attraction.php"><button>Powrót</button></a>
+                <a href="?page=attraction"><button>Powrót</button></a>
             </div>
         </article>
         <?php include "fragment/footer.php" ?>
