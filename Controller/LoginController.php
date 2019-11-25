@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Model/Utils/Messages/LoginMessage.php';
+require_once 'Model/Utils/Messages/LogoutMessage.php';
 require_once 'Model/User.php';
 class LoginController extends ApplicationController {
 
@@ -23,12 +24,20 @@ class LoginController extends ApplicationController {
                 $this->render('login', $message->getMessage());
                 return;
             }
-
+            $_SESSION['id'] = $user->getLogin();
+            $_SESSION['role'] = $user->getRole();
             $url = "http://$_SERVER[HTTP_HOST]/";
             header("Location: {$url}?page=city");
         }
 
         $this->render('login');
+    }
+
+    public function logout(){
+        session_unset();
+        session_destroy();
+        $message = new LogoutMessage();
+        $this->render('index', $message->getMessage());
     }
 }
 

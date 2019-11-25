@@ -5,6 +5,7 @@ class ApplicationController{
 
     public function __construct(){
         $this->request = $_SERVER['REQUEST_METHOD'];
+        session_start();
     }
 
     protected function isGet(): bool { return $this->request === 'GET';}

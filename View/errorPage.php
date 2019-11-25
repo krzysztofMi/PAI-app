@@ -10,11 +10,14 @@
     <body>
         <?php include "fragment/header.php" ?>
         <article class="verticalContainer">
-            <h1 id="error-code">Kod błędu</h1>
-            <p1>coś poszło nie tak</p1>
-            <button class="button-yellow-smaller">Powrót na strone główną</button>
+
+            <h1 id="error-code">
+                Error Code
+            </h1>
+            <p1>Coś poszło nie tak</p1>
+            <a href="?page=index"><button class="button-yellow">Powrót na strone główną</button></a>
             <div id="information-panel"">
-                Skontaktuj się z nami w celu naprawy tego błędu.
+                Skontaktuj się z nami w celu naprawy tego błędu: torusimus@tourismus.com
             </div>
         </article>
         <?php include "fragment/footer.php" ?>

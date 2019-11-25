@@ -16,6 +16,7 @@ class FrontController{
         $this->routes = [
             'index' => ['controller' => 'IndexController', 'action' => 'home'],
             'login' => ['controller' => 'LoginController', 'action' => 'login'],
+            'logout' => ['controller' => 'LoginController', 'action' => 'logout'],
             'register' => ['controller' => 'RegistrationController', 'action' => 'register'],
             'city' => ['controller' => 'CityController', 'action' => 'showCity'],
             'attraction' => ['controller' => 'AttractionController', 'action' => 'showAttractionsType'],

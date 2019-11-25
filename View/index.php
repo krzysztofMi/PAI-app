@@ -13,6 +13,13 @@
                 <img src="../resource/img/logo.svg">
             </div>
             <div class="buttons">
+                <div class="message">
+                    <?php
+                        if(isset($logoutMessage)){
+                            echo $logoutMessage;
+                        }
+                    ?>
+                </div>
                 <div>
                     <a href="?page=login"><button class="button-yellow button-go-down button-round">Zaloguj się</button></a>
                 </div>
