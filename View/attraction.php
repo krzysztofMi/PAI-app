@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="../resource/style/style.css">
     </head>
     <body>
-        <?php include "fragment/authentication.php"?>
+        <?php include "fragment/authorization.php" ?>
         <?php include "fragment/header.php" ?>
         <div class="container">
             <div id = left-corner>
