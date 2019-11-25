@@ -12,7 +12,7 @@
         <article class="verticalContainer">
 
             <h1 id="error-code">
-                Error Code
+                <?php if(isset($_GET['errorCode'])) echo $_GET['errorCode']; else echo "Kod błędu";?>
             </h1>
             <p1>Coś poszło nie tak</p1>
             <a href="?page=index"><button class="button-yellow">Powrót na strone główną</button></a>
