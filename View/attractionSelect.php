@@ -16,26 +16,28 @@
             <?php foreach($attractions as $attraction): ?>
                 <form action="" method="POST">
                     <div class="wrapper">
-                        <input type=hidden name="name" value="<?= $attraction->getName() ?>">
-                        <input type=hidden name="description" value="<?= $attraction->getDescription() ?>">
+                        <input type=hidden name="name" value="<?= $attraction->getName()?>">
+                        <input type=hidden name="description" value="<?= $attraction->getShortDescription() ?>">
                         <button type="submit">
-                            <img src="<?= '../resource/img/tmp/'.$attraction->getImage().".jpg" ?>">
+                            <img src="<?=MEDIA_FOLDER.$attraction->getImagePath()?>">
                             <div class="attraction-name">
                                 <p><?= $attraction->getName()?></p>
                             </div>
                         </button>
                     </div>
                 </form>
-                <?php endforeach ?>
+            <?php endforeach ?>
             </nav>
             <article>
                 <div class="information">
                     <h1>
                         <?php
+                            $isEmpty = empty($attractions);
                             if(isset($_POST['name'])){
                                 echo $_POST['name'];
                             }else{
-                                echo "Nazwa";
+                                $text = $isEmpty ? "Brak atrakcji." : "Wybierz atrakcję";
+                                echo $text;
                             }
                         ?>
                     </h1>
@@ -44,11 +46,16 @@
                         if(isset($_POST['description'])){
                            echo $_POST['description'];
                         }else{
-                            echo "Opis";
+                            $text = $isEmpty ? "Wybrane przez ciebie mastio jest nieatrakcyjne :(" : "Tu pojawi się opis wybranej przez ciebie atrakcji.";
+                            echo $text;
                         }
                         ?>
                     </p>
-                    <a href="?page=attraction/view"><button class="button-yellow black-border" id="position-down">Sprawdź</button></a>
+                    <a href="?page=attraction/view" <?php if($isEmpty) echo "hidden=true"?>>
+                        <button class="button-yellow black-border" id="position-down">
+                            Sprawdź
+                        </button>
+                    </a>
                 </div>
                 <div>
                     <a href="?page=attraction"><button class="button-yellow">Powrót</button></a>

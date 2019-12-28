@@ -30,7 +30,10 @@
                             </h1>
                             <p>
                                 <?php foreach ($cities as $city) {
-                                    if($_SESSION['city'] == $city->getName()){ echo $city->getDescription(); }
+                                    if($_SESSION['city'] == $city->getName()){
+                                        echo $city->getDescription();
+                                        $_SESSION['city'] = $city;
+                                    }
                                 }?>
                             </p>
                         </div>

@@ -3,21 +3,29 @@
 
 class Attraction{
 
-    private $image;
+    private $id;
+    private $type;
+    private $imagePath;
     private $name;
-    private $description;
+    private $shortDescription;
     private $city;
+    private $description;
 
-    public function __construct(string $image, string $name, string $description){
-        $this->image = $image;
+    public function __construct(string $name, string $imagePath,
+                                string $shortDescription, int $id = null,
+                                int $city = null, $type = null){
         $this->name = $name;
-        $this->description = $description;
+        $this->imagePath = $imagePath;
+        $this->shortDescription = $shortDescription;
+        $this->id = $id;
+        $this->city = $city;
+        $this->type = $type;
     }
 
-    public function getImage() : string { return $this->image; }
+    public function getImagePath() : string { return $this->imagePath; }
     public function getName() : string { return $this->name; }
-    public function getDescription() : string {return $this->description; }
-    public function setImage(string $image){ $this->image = $image; }
+    public function getShortDescription() : string {return $this->shortDescription; }
+    public function setImagePath(string $imagePath){ $this->imagePath = $imagePath; }
     public function setName(string $name){ $this->name = $name; }
-    public function setDescription(string $description){ $this->description = $description; }
+    public function setShortDescription(string $shortDescription){ $this->shortDescription = $shortDescription; }
 }
