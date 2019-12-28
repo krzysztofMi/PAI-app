@@ -6,6 +6,7 @@ class Attraction{
     private $image;
     private $name;
     private $description;
+    private $city;
 
     public function __construct(string $image, string $name, string $description){
         $this->image = $image;

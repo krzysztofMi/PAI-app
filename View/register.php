@@ -12,6 +12,13 @@
             <div class="underline-header">
                 <h1>Rejestracja</h1>
             </div>
+            <div class="message">
+                <?php
+                    if(isset($registerMessage)){
+                        echo($registerMessage);
+                    }
+                ?>
+            </div>
             <form action="?page=register" method="POST">
                 Login:
                 <input name="login" type="text">
@@ -20,7 +27,7 @@
                 Hasło:
                 <input name="password" type="password">
                 Powtórz hasło:
-                <input name="password" type="password">
+                <input name="repassword" type="password">
                 <button type="submit" class="button-yellow button-round">Zarejestruj się</button>
             </form>
             <a style="width: 50%;" href="?page=login">

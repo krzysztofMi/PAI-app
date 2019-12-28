@@ -12,14 +12,14 @@
         <div class="underline-header">
             <h1>Logowanie</h1>
         </div>
-        <form action="?page=login" method="POST">
-            <div class="message">
-                <?php
+        <div class="message">
+            <?php
                 if(isset($loginMessage)){
                     echo $loginMessage;
                 }
-                ?>
-            </div>
+            ?>
+        </div>
+        <form action="?page=login" method="POST">
             Login:
             <input name="login" type="text" placeholder="Twój login...">
             Hasło:

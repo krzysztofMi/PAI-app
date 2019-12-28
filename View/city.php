@@ -11,15 +11,12 @@
         <?php include "fragment/authorization.php" ?>
         <?php include "fragment/header.php" ?>
             <div class="container">
-
                 <nav class="cityView">
                     <p style="text-align: center">Wybierz miasto które cię interesuje</p>
                     <form action="" method="POST">
-                        <input type="submit" value="Kraków" class="button-yellow-height" name="cityButton">
-                        <input type="submit" value="Warszawa" class="button-yellow-height" name="cityButton">
-                        <input type="submit" value="Gdańsk" class="button-yellow-height" name="cityButton">
-                        <input type="submit" value="Wrocław" class="button-yellow-height" name="cityButton">
-                        <input type="submit" value="Łódź" class="button-yellow-height" name="cityButton">
+                        <?php foreach ($cities as $city): ?>
+                            <input type="submit" value="<?=$city->getName()?>" class="button-yellow-height" name="cityButton">
+                        <?php endforeach;?>
                     </form>
                 </nav>
                 <article>
@@ -27,15 +24,15 @@
                         <div class="information">
                             <h1 style="text-align: center">
                                 <?php
-                                    if(isset($_POST['cityButton'])) {
-                                        $_SESSION['city'] = $_POST["cityButton"];
-                                        echo $_POST["cityButton"];}
-                                    else{
-                                        echo "Miasto";
-                                    }
+                                    $_SESSION['city'] = isset($_POST['cityButton']) ? $_POST["cityButton"] : "Kraków";
+                                    echo $_SESSION["city"];
                                  ?>
                             </h1>
-                            <p>DesaesalehahelsaheDesaesalehahelsaheDesaesalehahelsaheDesaesalehahelsahe</p>
+                            <p>
+                                <?php foreach ($cities as $city) {
+                                    if($_SESSION['city'] == $city->getName()){ echo $city->getDescription(); }
+                                }?>
+                            </p>
                         </div>
                         <a href="?page=attraction" class="flexCenter"><button class="button-yellow button-rounder">Dalej</button></a>
                     </div>

@@ -3,18 +3,25 @@
 require_once 'Model/Utils/Messages/LoginMessage.php';
 require_once 'Model/Utils/Messages/LogoutMessage.php';
 require_once 'Model/User.php';
+require_once 'Repository/UserRepository.php';
+
 class LoginController extends ApplicationController {
+
+    private $userRepository;
+
+    public function __construct(){
+        parent::__construct();
+        $this->userRepository = new UserRepository();
+    }
 
     public function login(){
 
-        $user = new User("admin", "poczta@poczta.pl", "admin");
         if($this->isPost()){
             $login = $_POST["login"];
-            $user->setPassword(password_hash($user->getPassword(), PASSWORD_BCRYPT));
 
-            //CONNECT TO DB CHECK PASSWORD ETC.
+            $user = $this->userRepository->getUserByLogin($login);
 
-            if($login != 'admin'){
+            if(!isset($user)){
                 $message = new LoginMessage("login");
                 $this->render('login', $message->getMessage());
                 return;
@@ -24,8 +31,8 @@ class LoginController extends ApplicationController {
                 $this->render('login', $message->getMessage());
                 return;
             }
-            $_SESSION['id'] = $user->getLogin();
-            $_SESSION['role'] = $user->getRole();
+            $_SESSION["id"] = $user->getLogin();
+            $_SESSION["role"] = $user->getRole();
             $url = "http://$_SERVER[HTTP_HOST]/";
             header("Location: {$url}?page=city");
         }

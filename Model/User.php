@@ -1,11 +1,12 @@
 <?php
 
 class User{
+    private $id;
     private $login;
     private $email;
     private $password;
 
-    private $role = ['ROLE_ADMIN'];
+    private $role;
 
     private $city;
     private $age;
@@ -13,12 +14,19 @@ class User{
     public function __construct(
         string $login,
         string $email,
-        string $password
+        string $password,
+        string $city = null,
+        int $age = null,
+        int $id = null
     )
     {
+        $this->role = array();
+        $this->id = $id;
         $this->login = $login;
         $this->email = $email;
         $this->password = $password;
+        $this->city = $city;
+        $this->age = $age;
     }
 
     public function setLogin(string $login){ $this->login = $login; }
@@ -26,14 +34,13 @@ class User{
     public function setPassword(string $password){ $this->password = $password; }
     public function setCity(string $city){ $this->city = $city; }
     public function setAge(int $age){ $this->age = $age; }
-    public function setRole(string $role){ $this->role[0] = $role; }
-
     public function getLogin(): string { return $this->login; }
     public function getEmail(): string { return $this->email; }
     public function getPassword(): string { return $this->password; }
-    public function getCity(): string { return $this->city; }
-    public function getAge(): int { return $this->age; }
-    public function getRole(): string { return $this->role[0]; }
-
+    public function getCity(): ?string { return $this->city; }
+    public function getAge(): ?int { return $this->age; }
+    public function getRole(): array { return $this->role; }
+    public function setRole($roles) { $this->role = $roles; }
+    public function addRole($role) { array_push($this->role, $role); }
 
 }
