@@ -22,6 +22,7 @@ class Attraction{
         $this->type = $type;
     }
 
+    public function getId() : int {return $this->id; }
     public function getImagePath() : string { return $this->imagePath; }
     public function getName() : string { return $this->name; }
     public function getShortDescription() : string {return $this->shortDescription; }

@@ -5,38 +5,46 @@
         <title>Title</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="../resource/style/style.css">
+        <link rel="stylesheet" type="text/css" href="../resource/style/attraction.css">
     </head>
     <body>
         <?php include "fragment/authorization.php" ?>
         <?php include "fragment/header.php" ?>
-        <article>
-            <div>
-                <section>
-                    Nazwa atrakcji
+        <article class="verticalContainer">
+            <div style="margin-top: 2em;">
+                <section class="name" style="width: 20%">
+                    <?=$attraction['name']?>
                 </section>
-                <section>
-                    <button>Opis</button>
-                    <button>Ceny</button>
-                    <button>Położenie</button>
+                <section class="mainArticle">
+                    <div class="btn-group" style="width: 100%">
+                        <button class="button-yellow" style="width: 33.3%">Opis</button>
+                        <button class="button-yellow" style="width: 33.3%">Ceny</button>
+                        <button class="button-yellow" style="width: 33.3%">Położenie</button>
+                    </div>
                     <div>
-                        <p></p>
-                        <div>
+                        <p><?=$attraction['short_description']?></p>
+                        <div style="padding-bottom: 0.5em">
                             Link do strony.
-                            <button>Oceń</button>
-                            <img src="../resource/img/heart.svg">
+                            <div class="rightContent">
+                                <button class="markButton">Oceń</button>
+                                <img src="../resource/img/heart.svg">
+                            </div>
                         </div>
                     </div>
                 </section>
+                <section class="images image-grid" style="grid-template-columns: 0.5fr 0.5fr;">
+                    <img src="../3S/images/attraction/wawel.jpg">
+                    <img src="../3S/images/attraction/wawel.jpg">
+                    <img src="../3S/images/attraction/wawel.jpg">
+                    <img src="../3S/images/attraction/wawel.jpg">
+                </section>
             </div>
-            <section>
-                Obraski
-            </section>
-            <section>
-                <p>Autor</p>
-                <div>
+            <section class="comment-section">
+                <p class="author">Autor</p>
+                <div class="comment">
                     Komentarz
                 </div>
-                <div>
+                <div class="grade">
                     Ocena
                 </div>
             </section>

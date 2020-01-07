@@ -15,7 +15,10 @@ class LoginController extends ApplicationController {
     }
 
     public function login(){
-
+        if(isset($_SESSION["id"])){
+            $url = "http://$_SERVER[HTTP_HOST]/";
+            header("Location: {$url}?page=city");
+        }
         if($this->isPost()){
             $login = $_POST["login"];
 

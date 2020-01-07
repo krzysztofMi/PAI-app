@@ -23,7 +23,8 @@ class FrontController{
             'attraction' => ['controller' => 'AttractionController', 'action' => 'showAttractionsType'],
             'attraction/select' => ['controller' => 'AttractionSelectionController', 'action' => 'showAttractions'],
             'attraction/view' => ['controller' => 'AttractionViewController', 'action' => 'showAttraction'],
-            'error' => ['controller' => 'ErrorController', 'action' => 'showErrorPage']
+            'error' => ['controller' => 'ErrorController', 'action' => 'showErrorPage'],
+            'attraction_get' => ['controller' => 'AttractionSelectionController', 'action' => 'attraction']
         ];
     }
 

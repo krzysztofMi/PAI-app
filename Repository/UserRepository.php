@@ -34,13 +34,15 @@ class UserRepository extends Repository {
 
         if($user == false)  return null;
 
-        return $this->getRoles(new User(
+        $userWithRole = $this->getRoles(new User(
             $user['login'],
             $user['email'],
             $user['password'],
             $user['city'],
             $user['age'],
             $user['id']));
+
+        return $userWithRole;
     }
 
     public function getUserByLogin($login): ?User{
@@ -90,3 +92,8 @@ class UserRepository extends Repository {
 }
 
 ?>
+
+
+
+
+
