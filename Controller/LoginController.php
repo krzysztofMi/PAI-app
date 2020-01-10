@@ -34,6 +34,7 @@ class LoginController extends ApplicationController {
                 $this->render('login', $message->getMessage());
                 return;
             }
+            $_SESSION["user_id"] = $user->getId();
             $_SESSION["id"] = $user->getLogin();
             $_SESSION["role"] = $user->getRole();
             $url = "http://$_SERVER[HTTP_HOST]/";

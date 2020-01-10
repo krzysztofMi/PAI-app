@@ -9,20 +9,22 @@ function myFunction(button) {
         url : apiUrl + "/?page=attraction_get&id=" + id,
         dataType: "json"
     }).done( (res) =>{
+        console.log(res);
         $attractionName.empty();
         $attractionName.text(res.name);
         $attractionDescription.empty();
         $attractionDescription.text(res.short_description);
-        $attractionId.val(res.atr_id);
-    })
+        $attractionId.val(id);
+        if($("#aId").val() != ""){
+            $("#position-down").attr("disabled", false);
+        }
+    });
 
-    if($("#aId").val() != ""){
-        $("#position-down").attr("disabled", false);
-    }
 }
 
 function nextPage(){
     attrId = $("#aId").val();
+
     if(attrId == ""){
         return
     }

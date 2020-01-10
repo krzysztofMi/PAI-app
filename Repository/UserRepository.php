@@ -29,20 +29,15 @@ class UserRepository extends Repository {
             'SELECT * FROM tourismus_user WHERE  email = :email'
         );
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-        $stmt->execute();
-        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $this->getUser($stmt);
+    }
 
-        if($user == false)  return null;
-
-        $userWithRole = $this->getRoles(new User(
-            $user['login'],
-            $user['email'],
-            $user['password'],
-            $user['city'],
-            $user['age'],
-            $user['id']));
-
-        return $userWithRole;
+    public function getUserById(int $id) : ?User{
+        $stmt = $this->database->connect()->prepare(
+            'SELECT * FROM tourismus_user WHERE  id = :id'
+        );
+        $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+        return $this->getUser($stmt);
     }
 
     public function getUserByLogin($login): ?User{
@@ -50,6 +45,10 @@ class UserRepository extends Repository {
             'SELECT * FROM tourismus_user WHERE login = :login'
         );
         $stmt->bindParam(':login', $login, PDO::PARAM_STR);
+        return $this->getUser($stmt);
+    }
+
+    private function getUser($stmt) : ?User{
         $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -61,14 +60,16 @@ class UserRepository extends Repository {
             $user['city'],
             $user['age'],
             $user['id']);
+
         return $this->getRoles($user);
     }
 
     private function getRoles(User $user): ?User{
         $stmt = $this->database->connect()->prepare(
-            "SELECT r.role FROM role r, tourismus_user u, user_role ru
-                       WHERE u.id = ru.user_id and ru.id = r.id"
+            "SELECT r.role FROM role r, tourismus_user u, user_role ur
+                       WHERE r.id = ur.role_id and u.id = ur.user_id and u.id = :id"
         );
+        $stmt->bindValue(":id", $user->getId());
         $stmt->execute();
         $roles = $stmt->fetchAll(PDO::FETCH_ASSOC);
         foreach ($roles as $role){

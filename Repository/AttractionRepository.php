@@ -28,8 +28,8 @@ class AttractionRepository extends Repository{
 
    public function getAttractionById(int $attractionId){
        $stmt = $this->database->connect()->prepare(
-           "SELECT add.id AS add_id, atr.id AS atr_id, atr.name, atr.imagepath, atr.short_description from attraction atr, address add
-                       WHERE atr.id = :id;"
+           "SELECT * from attraction atr
+                       WHERE id = :id;"
        );
        $stmt->bindParam(':id', $attractionId);
        $stmt->execute();

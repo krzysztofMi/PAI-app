@@ -8,6 +8,7 @@ require_once 'Controller/AttractionController.php';
 require_once 'Controller/AttractionSelectionController.php';
 require_once 'Controller/AttractionViewController.php';
 require_once 'Controller/ErrorController.php';
+require_once 'Controller/CommentController.php';
 
 class FrontController{
 
@@ -24,7 +25,9 @@ class FrontController{
             'attraction/select' => ['controller' => 'AttractionSelectionController', 'action' => 'showAttractions'],
             'attraction/view' => ['controller' => 'AttractionViewController', 'action' => 'showAttraction'],
             'error' => ['controller' => 'ErrorController', 'action' => 'showErrorPage'],
-            'attraction_get' => ['controller' => 'AttractionSelectionController', 'action' => 'attraction']
+            'attraction_get' => ['controller' => 'AttractionSelectionController', 'action' => 'attraction'],
+            'comment' => ['controller' => 'CommentController', 'action' => 'add'],
+            'deleteComment' => ['controller' => 'CommentController', 'action' => 'delete']
         ];
     }
 
