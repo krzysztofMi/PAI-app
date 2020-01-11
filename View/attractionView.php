@@ -59,9 +59,10 @@
                 </div>
                 <button value="<?=$comment->getId()?>"
                         <?php $isWriteByMe = $comment->getAuthor()->getId() === $_SESSION['user_id'];
-                            error_log(User::checkIfMod($_SESSION['role']));
-                            if(!$isWriteByMe || !User::checkIfAdmin($_SESSION['role'])){
-                               echo "hidden='true'";
+                            if($isWriteByMe || $privileges){
+
+                            }else{
+                                echo "hidden='true'";
                             }?>
                         onclick="deleteComment(this)">remove</button>
                 <div class="grade">

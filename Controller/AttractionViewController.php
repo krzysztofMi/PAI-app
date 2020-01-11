@@ -21,7 +21,10 @@ class AttractionViewController extends ApplicationController {
         }
         $attraction = $this->attractionRepository->getAttractionById($_POST['aId']);
         $comments = $this->commentRepository->getAllCommentFromAttraction($_POST['aId']);
-        $this->render('attractionView', ['attraction' => $attraction, 'comments' => $comments]);
+        $canModifyContent = User::checkIfAdmin($_SESSION['role']) || User::checkIfMod($_SESSION['role']);
+        $this->render('attractionView', ['attraction' => $attraction,
+            'comments' => $comments,
+            'privileges' => $canModifyContent]);
     }
 
 }
