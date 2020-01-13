@@ -28,7 +28,6 @@ function deleteComment(button) {
         url : apiUrl + "/?page=deleteComment&id=" + id,
     }).done((res)=>
     {
-        console.log("DELETE");
         $(button).next().remove();
         $(button).prev().remove();
         $(button).prev().remove();

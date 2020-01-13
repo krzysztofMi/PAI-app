@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="../../resource/style.css">
     </head>
     <body>
-        <?php include "fragment/authorization.php" ?>
+        <?php include "fragment/authorizationUser.php" ?>
         <?php include "fragment/header.php" ?>
         <nav>
             <button>Ulubione</button>

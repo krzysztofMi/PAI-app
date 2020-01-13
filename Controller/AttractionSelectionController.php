@@ -33,11 +33,4 @@ class AttractionSelectionController extends ApplicationController{
         $this->render("attractionSelect", ['attractions' => $attractions]);
     }
 
-    public function attraction(){
-        header("Content-type: application-json");
-        http_response_code(200);
-        $id = $_GET['id'];
-        echo $this->attractionRepository->getAttractionById($id) ?
-                json_encode($this->attractionRepository->getAttractionById($id)) : "";
-    }
 }

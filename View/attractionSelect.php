@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="../resource/style/attraction.css">
     </head>
     <body>
-        <?php include "fragment/authorization.php" ?>
+        <?php include "fragment/authorizationUser.php" ?>
         <?php include "fragment/header.php" ?>
         <div class="container">
             <nav class="image-grid">
@@ -46,7 +46,7 @@
                     </button>
                 </div>
                 <div>
-                    <a href="?page=attraction"><button class="button-yellow">Powrót</button></a>
+                    <a href="?page=attraction/type"><button class="button-yellow">Powrót</button></a>
                 </div>
             </article>
         </div>

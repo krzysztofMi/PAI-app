@@ -29,7 +29,10 @@ class RegistrationController extends ApplicationController {
                 $this->render('register', $message->getMessage());
                 return;
             }
-            $user = new User($login, $email, $hashPassword);
+
+            $user = User::build()
+                ->setLogin($login)->setEmail($email)->setPassword($hashPassword)
+                ->build();
             $user->addRole("ROLE_USER");
             $controllUser = $this->userRepository->getUserByLogin($login);
             if($controllUser != null){

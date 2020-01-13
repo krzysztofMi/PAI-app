@@ -4,7 +4,6 @@
     <?php if(!empty($_SESSION)){?>
         <nav>
             <a href="?page=logout">Wyloguj</a>
-            <p><?=$_SESSION['id']?></p>
         </nav>
     <?php }?>
 </header>

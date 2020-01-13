@@ -1,7 +1,7 @@
 <?php
 
 
-class City{
+class City implements JsonSerializable {
     private $id;
     private $name;
     private $description;
@@ -18,4 +18,12 @@ class City{
     public function setName(string $name) { $this->name = $name; }
     public function getDescription(): string{ return $this->description; }
     public function setDescription(string $description){ $this->description = $description; }
+
+    public function jsonSerialize(){
+       return [
+           'id' => $this->id,
+           'name' => $this->name,
+           'description' => $this->description
+       ];
+    }
 }

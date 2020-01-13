@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="../resource/style/attraction.css">
     </head>
     <body>
-        <?php include "fragment/authorization.php" ?>
+        <?php include "fragment/authorizationUser.php" ?>
         <?php include "fragment/header.php" ?>
         <article class="verticalContainer">
             <div style="margin-top: 2em;">
@@ -17,16 +17,23 @@
                 </section>
                 <section class="mainArticle">
                     <div class="btn-group" style="width: 100%">
-                        <button class="button-yellow" style="width: 33.3%">Opis</button>
+                        <button class="button-yellow" style="width: 33.3%" onclick="changeContentToDescription(<?=json_encode($attraction['id'])?>)">Opis</button>
                         <button class="button-yellow" style="width: 33.3%">Ceny</button>
-                        <button class="button-yellow" style="width: 33.3%">Położenie</button>
+                        <button class="button-yellow" onclick="changeContentToAddress(<?=json_encode($attraction['address_id'])?>)" style="width: 33.3%">Położenie</button>
                     </div>
                     <div>
-                        <p><?=$attraction['description']?></p>
+                        <p id="content-paragraph"><?=$attraction['description']?></p>
                         <div style="padding-bottom: 0.5em">
                             Link do strony.
                             <div class="rightContent">
-                                <button class="markButton">Oceń</button>
+                                <button class="markButton" onclick="openGradeList()">Oceń</button>
+                                <div id="myDropdown" class="dropdown-content">
+                                    <button value="1" onclick="setGrade(this)">1</button>
+                                    <button value="2" onclick="setGrade(this)">2</button>
+                                    <button value="3" onclick="setGrade(this)">3</button>
+                                    <button value="4" onclick="setGrade(this)">4</button>
+                                    <button value="5" onclick="setGrade(this)">5</button>
+                                </div>
                                 <img src="../resource/img/heart.svg">
                             </div>
                         </div>
@@ -80,3 +87,5 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script src="../resource/js/comment.js"></script>
+<script src="../resource/js/attractionViewScripts.js"></script>
+<script src="../resource/js/gradeAjax.js"></script>

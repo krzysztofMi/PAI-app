@@ -9,6 +9,10 @@ require_once 'Controller/AttractionSelectionController.php';
 require_once 'Controller/AttractionViewController.php';
 require_once 'Controller/ErrorController.php';
 require_once 'Controller/CommentController.php';
+require_once 'Controller/AddressController.php';
+require_once 'Controller/AdminPanelController.php';
+require_once 'Controller/UserPanelController.php';
+require_once 'Controller/UserController.php';
 
 class FrontController{
 
@@ -21,13 +25,17 @@ class FrontController{
             'logout' => ['controller' => 'LoginController', 'action' => 'logout'],
             'register' => ['controller' => 'RegistrationController', 'action' => 'register'],
             'city' => ['controller' => 'CityController', 'action' => 'showCity'],
-            'attraction' => ['controller' => 'AttractionController', 'action' => 'showAttractionsType'],
+            'attraction/type' => ['controller' => 'AttractionController', 'action' => 'showAttractionsType'],
             'attraction/select' => ['controller' => 'AttractionSelectionController', 'action' => 'showAttractions'],
             'attraction/view' => ['controller' => 'AttractionViewController', 'action' => 'showAttraction'],
             'error' => ['controller' => 'ErrorController', 'action' => 'showErrorPage'],
-            'attraction_get' => ['controller' => 'AttractionSelectionController', 'action' => 'attraction'],
             'comment' => ['controller' => 'CommentController', 'action' => 'add'],
-            'deleteComment' => ['controller' => 'CommentController', 'action' => 'delete']
+            'deleteComment' => ['controller' => 'CommentController', 'action' => 'delete'],
+            'address' => ['controller' => 'AddressController', 'action' => 'get'],
+            'attraction' => ['controller' => 'AttractionController', 'action' => 'attraction'],
+            'adminPanel' => ['controller' => 'AdminPanelController', 'action' => 'showAdminPanel'],
+            'userPanel' => ['controller' => 'UserPanelController', 'action' => 'showUserPanel'],
+            'users' => ['controller' => 'UserController', 'action' => 'getAll']
         ];
     }
 
@@ -41,5 +49,4 @@ class FrontController{
         }
     }
 }
-
 ?>

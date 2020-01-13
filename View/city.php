@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="../resource/style/city.css">
     </head>
     <body>
-        <?php include "fragment/authorization.php" ?>
+        <?php include "fragment/authorizationUser.php" ?>
         <?php include "fragment/header.php" ?>
             <div class="container">
                 <nav class="cityView">
@@ -37,7 +37,7 @@
                                 }?>
                             </p>
                         </div>
-                        <a href="?page=attraction" class="flexCenter"><button class="button-yellow button-rounder">Dalej</button></a>
+                        <a href="?page=attraction/type" class="flexCenter"><button class="button-yellow button-rounder">Dalej</button></a>
                     </div>
                 </article>
             </div>

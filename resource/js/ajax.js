@@ -1,12 +1,11 @@
 function myFunction(button) {
     const apiUrl = "http://localhost:8000";
     const id = $(button).val();
-
     const $attractionName = $("#aName");
     const $attractionDescription = $("#aDesc");
     const $attractionId = $("#aId");
     $.ajax({
-        url : apiUrl + "/?page=attraction_get&id=" + id,
+        url : apiUrl + "/?page=attraction&id=" + id,
         dataType: "json"
     }).done( (res) =>{
         console.log(res);

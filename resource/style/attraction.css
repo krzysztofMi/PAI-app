@@ -98,3 +98,11 @@
 #comment-info{
     color : red;
 }
+
+.dropdown-content{
+    display: none;
+}
+
+.show{
+    display: block;
+}
