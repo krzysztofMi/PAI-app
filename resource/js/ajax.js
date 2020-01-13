@@ -8,7 +8,6 @@ function myFunction(button) {
         url : apiUrl + "/?page=attraction&id=" + id,
         dataType: "json"
     }).done( (res) =>{
-        console.log(res);
         $attractionName.empty();
         $attractionName.text(res.name);
         $attractionDescription.empty();

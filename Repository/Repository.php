@@ -11,7 +11,7 @@ class Repository extends PDO{
         $this->database = new Database();
     }
 
-    protected $transactionCount = 0;
+    protected $transactionCounter = 0;
 
     public function beginTransaction()
     {

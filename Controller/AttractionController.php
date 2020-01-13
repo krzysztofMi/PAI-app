@@ -25,7 +25,7 @@ class AttractionController extends ApplicationController
             header("Location: {$url}?page=error&errorCode=404");
             return;
         }
-        header("Content-type: application-json");
+        header("Content-type: application-json; charset=utf-8'");
         http_response_code(200);
         $id = $_GET['id'];
         echo $this->attractionRepository->getAttractionById($id) ?
