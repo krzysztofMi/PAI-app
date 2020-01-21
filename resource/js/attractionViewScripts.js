@@ -1,13 +1,12 @@
 
 function changeContentToAddress(addressId) {
     const apiUrl = "http://localhost:8000";
-
     $.ajax({
         url: apiUrl + "/?page=address&id="+ addressId,
         dataType: "json"
     }
     ).done((res)=>{
-        $("#content-paragraph").html(res.city.name)
+        $("#content-paragraph").html(res.name)
         if(res.street != null ){
             $("#content-paragraph").append(" ul. " + res.street);
         }
@@ -24,7 +23,8 @@ function changeContentToDescription(attractionId) {
             dataType: "json"
         }
     ).done((res)=>{
-        $("#content-paragraph").html(res.description);
+        let description = res["description"] === null ? "Brak opisu." : res["description"];
+        $("#content-paragraph").html(description);
     });
 }
 

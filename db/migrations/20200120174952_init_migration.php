@@ -2,66 +2,37 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class MyFirstMigration extends AbstractMigration
+class InitMigration extends AbstractMigration
 {
-    /**
-     * Change Method.
-     *
-     * Write your reversible migrations using this method.
-     *
-     * More information on writing migrations is available here:
-     * http://docs.phinx.org/en/latest/migrations.html#the-abstractmigration-class
-     *
-     * The following commands can be used in this method and Phinx will
-     * automatically reverse them when rolling back:
-     *
-     *    createTable
-     *    renameTable
-     *    addColumn
-     *    addCustomColumn
-     *    renameColumn
-     *    addIndex
-     *    addForeignKey
-     *
-     * Any other destructive changes will result in an error when trying to
-     * rollback the migration.
-     *
-     * Remember to call "create()" or "update()" and NOT "save()" when working
-     * with the Table class.
-     */
+
     public function change()
     {
-        $this->execute("   
+        $this->execute("
 CREATE TABLE tourismus_user(
-                               id 			BIGSERIAL PRIMARY KEY,
-                               login 		TEXT NOT NULL,
-                               email		TEXT NOT NULL,
-                               password    TEXT NOT NULL,
-                               city		TEXT,
-                               age			INT
+	id 			BIGSERIAL PRIMARY KEY,
+	login 		TEXT NOT NULL,
+	email		TEXT NOT NULL,
+	password    TEXT NOT NULL,
+	city		TEXT,
+	age			INT
 );
 
-
-CREATE TABLE ROLE (
-    id SERIAL PRIMARY KEY,
-    role text NOT NULL
-);
-
-INSERT INTO ROLE VALUES (1, 'ROLE_ADMIN'),
-(2, 'ROLE_MOD'),
-(3, 'ROLE_USER'),
-(4, 'BAN');
+CREATE TABLE role(
+    id BIGSERIAL PRIMARY KEY,
+    role TEXT NOT NULL);
+    
+INSERT INTO role VALUES(1, 'ROLE_ADMIN'), (2, 'ROLE_MOD'), (3, 'ROLE_USER'), (4, 'BANNED');
 
 CREATE TABLE user_role(
     id BIGSERIAL PRIMARY KEY,
-    user_id BIGSERIAL references tourismus_user(id),
-    role_id SERIAL references role(id)
+    user_id BIGINT NOT NULL references tourismus_user(id),
+    role_id BIGINT NOT NULL references role(id)
 );
 
 CREATE TABLE city(
                      id 			BIGSERIAL PRIMARY KEY,
                      name TEXT NOT NULL,
-                     description TEXT NOT NULL
+                     description TEXT NOT NULL 
 );
 
 
@@ -80,62 +51,96 @@ Miasto należy do Unii Metropolii Polskich i Związku Miast Polskich, Związku P
 
 
 CREATE TABLE address(
-                        id BIGSERIAL PRIMARY KEY,
-                        city  BIGINT references city(id) NOT NULL,
-                        street TEXT,
-                        postal_code TEXT
+    id BIGSERIAL PRIMARY KEY,
+    city  BIGINT references city(id) NOT NULL,
+    street TEXT,
+    postal_code TEXT
 );
 
 CREATE TABLE attraction(
-                           id BIGSERIAL PRIMARY KEY,
-                           type TEXT NOT NULL,
-                           name TEXT NOT NULL,
-                           address_id BIGINT references address(id) NOT NULL,
-                           imagePath TEXT,
-                           short_description TEXT,
-                           description TEXT,
-                           price TEXT
+    id BIGSERIAL PRIMARY KEY,
+    type TEXT NOT NULL,
+    name TEXT NOT NULL,
+    address_id BIGINT references address(id) NOT NULL,
+    imagePath TEXT,
+    short_description TEXT,
+    description TEXT,
+    price TEXT
 );
 
+INSERT INTO address(id, city) VALUES (1, 1),
+(2, 1),
+(3, 1),
+(4, 1),
+(5, 1),
+(6, 1),
+(7, 1),
+(8, 1),
+(9, 1);
 
-
-INSERT INTO address(id, city) VALUES (1, 1);
-INSERT INTO address(id, city) VALUES (2, 1);
-INSERT INTO address(id, city) VALUES (3, 1);
-INSERT INTO address(id, city) VALUES (4, 1);
-INSERT INTO address(id, city) VALUES (5, 1);
-INSERT INTO address(id, city) VALUES (6, 1);
-INSERT INTO address(id, city) VALUES (7, 1);
-INSERT INTO address(id, city) VALUES (8, 1);
-INSERT INTO address(id, city) VALUES (9, 1);
-
-INSERT INTO attraction (id, type, name, address_id, imagepath, short_description)
-VALUES (1, 'MONUMENT', 'Wawel', 1, 'images\attraction\wawel.jpg', 'Zamek królewski na wawelu'),
-       (2, 'MONUMENT', 'Barbakan', 2, 'images\attraction\barbakan.jpg', 'Barbakan'),
-       (3, 'MONUMENT', 'Kopalnia soli', 3, 'images\attraction\kopalnia.jpg', 'Kopalnia soli w Wieliczce'),
-       (4, 'MONUMENT', 'Kopiec Kościuszku', 4, 'images\attraction\kopiec.jpg', 'Kopiec Kościuszku'),
-       (5, 'MONUMENT', 'Kościół Mariacki', 5, 'images\attraction\mariacka.jpg', 'Kościół Mariacki na rynku'),
-       (6, 'MONUMENT', 'Planty', 6, 'images\attraction\planty.jpg', 'Planty wokół rynku'),
-       (7, 'MONUMENT', 'Rynek', 7, 'images\attraction\\rynek.jpg', 'Rynek główny w Krakowie'),
-       (8, 'MONUMENT', 'Smok', 8, 'images\attraction\smok.jpg', 'Smok wawelski obok Wawelu'),
-       (9, 'MONUMENT', 'Sukiennice', 9, 'images\attraction\sukiennice.jpg', 'Sukiennice na rynku');
-
+INSERT INTO attraction (id, type, name, address_id, imagepath, short_description, description)
+    VALUES (1, 'MONUMENT', 'Wawel', 1, 'images\attraction\wawel.jpg', 'Zamek królewski na wawelu', 'Brak opisu.'),
+           (2, 'MONUMENT', 'Barbakan', 2, 'images\attraction\barbakan.jpg', 'Barbakan', 'Brak opisu.'),
+           (3, 'MONUMENT', 'Kopalnia soli', 3, 'images\attraction\kopalnia.jpg', 'Kopalnia soli w Wieliczce', 'Brak opisu.'),
+           (4, 'MONUMENT', 'Kopiec Kościuszku', 4, 'images\attraction\kopiec.jpg', 'Kopiec Kościuszku', 'Brak opisu.'),
+           (5, 'MONUMENT', 'Kościół Mariacki', 5, 'images\attraction\mariacka.jpg', 'Kościół Mariacki na rynku', 'Brak opisu.'),
+           (6, 'MONUMENT', 'Planty', 6, 'images\attraction\planty.jpg', 'Planty wokół rynku', 'Brak opisu.'),
+           (7, 'MONUMENT', 'Rynek', 7, 'images\attraction/rynek.jpg', 'Rynek główny w Krakowie', 'Brak opisu.'),
+           (8, 'MONUMENT', 'Smok', 8, 'images\attraction\smok.jpg', 'Smok wawelski obok Wawelu', 'Brak opisu.'),
+           (9, 'MONUMENT', 'Sukiennice', 9, 'images\attraction\sukiennice.jpg', 'Sukiennice na rynku', 'Brak opisu.');
 
 
 CREATE TABLE comment(
-                        id BIGSERIAL PRIMARY KEY,
-                        user_id BIGINT references tourismus_user(id) NOT NULL,
-                        content TEXT NOT NULL,
-                        attraction_id BIGINT NOT NULL references attraction(id),
-                        comment_id BIGINT references comment(id)
+                          id BIGSERIAL PRIMARY KEY,
+                          user_id BIGINT references tourismus_user(id) NOT NULL,
+                          content TEXT NOT NULL,
+			  attraction_id BIGINT NOT NULL references attraction(id),
+			  comment_id BIGINT references comment(id)
 );
 
 CREATE TABLE grade(
-                      id BIGSERIAL PRIMARY KEY,
-                      user_id BIGINT references tourismus_user(id) NOT NULL ,
-                      attraction_id BIGINT references attraction(id) NOT NULL,
-                      grade INT NOT NULL
+    id BIGSERIAL PRIMARY KEY,
+    user_id BIGINT references tourismus_user(id) NOT NULL ,
+    attraction_id BIGINT references attraction(id) NOT NULL,
+    grade INT NOT NULL
 );
-        ");
+
+
+CREATE VIEW user_with_role AS
+    SELECT u.id, u.login, u.email, r.role 
+    FROM tourismus_user u  
+    LEFT JOIN user_role ur on u.id = ur.user_id
+    LEFT JOIN role r on r.id = ur.role_id; 
+
+CREATE VIEW full_address AS
+    SELECT a.id, c.name, a.street, a.postal_code
+    FROM address a
+    LEFT JOIN city c on c.id = a.city;
+
+CREATE TABLE user_creation_time(
+    id BIGSERIAL PRIMARY KEY ,
+    user_id BIGINT NOT NULL ,
+    insert_time TIMESTAMP(6) NOT NULL
+);
+
+ CREATE OR REPLACE FUNCTION log_new_user()
+    RETURNS trigger AS
+$BODY$
+ BEGIN
+    INSERT INTO user_creation_time(user_id, insert_time)
+    VALUES(1 ,now());
+    RETURN NEW;
+ END;
+ $BODY$
+LANGUAGE plpgsql;
+
+ CREATE TRIGGER new_user_insert
+     AFTER INSERT
+     ON tourismus_user
+     FOR EACH ROW
+     EXECUTE PROCEDURE log_new_user();
+
+"
+        );
     }
 }

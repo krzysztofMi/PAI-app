@@ -20,7 +20,7 @@ class Database
     public function connect()
     {
         try {
-            $conn = new PDO(
+            $conn = new myPDO(
                 "pgsql:host=$this->host;dbname=$this->database",
                 $this->username,
                 $this->password
@@ -32,5 +32,36 @@ class Database
         catch(PDOException $e) {
             die("Connection failed: " . $e->getMessage());
         }
+    }
+}
+
+
+class myPDO extends PDO{
+    protected $transactionCounter = 0;
+
+    public function beginTransaction()
+    {
+        if (!$this->transactionCounter++) {
+            return parent::beginTransaction();
+        }
+        $this->exec('SAVEPOINT trans'.$this->transactionCounter);
+        return $this->transactionCounter >= 0;
+    }
+
+    public function commit()
+    {
+        if (!--$this->transactionCounter) {
+            return parent::commit();
+        }
+        return $this->transactionCounter >= 0;
+    }
+
+    public function rollback()
+    {
+        if (--$this->transactionCounter) {
+            $this->exec('ROLLBACK TO trans'.$this->transactionCounter + 1);
+            return true;
+        }
+        return parent::rollback();
     }
 }

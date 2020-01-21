@@ -10,7 +10,11 @@ abstract class CreditionalsValidator implements Validator {
         return strlen($this->creditional) > strlen($textWithoutSpace);
     }
 
-    protected function checkIfShorter(int $lenght) : bool{
-        return $this->creditional<$lenght;
+    protected function checkIfShorter(int $length) : bool{
+        return $this->creditional<$length;
+    }
+
+    protected function checkIfLonger(int $length) : bool{
+        return $this->creditional>$length;
     }
 }

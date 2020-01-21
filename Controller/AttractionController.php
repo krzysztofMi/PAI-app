@@ -19,13 +19,12 @@ class AttractionController extends ApplicationController
     }
 
     public function attraction(){
-        error_log(var_dump(isset($_GET['id'])));
         if(!isset($_GET['id'])){
             $url = "http://$_SERVER[HTTP_HOST]/";
             header("Location: {$url}?page=error&errorCode=404");
             return;
         }
-        header("Content-type: application-json; charset=utf-8'");
+        header("Content-type: application-json");
         http_response_code(200);
         $id = $_GET['id'];
         echo $this->attractionRepository->getAttractionById($id) ?

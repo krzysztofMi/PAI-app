@@ -15,9 +15,9 @@ class AddressRepository extends Repository
     }
 
 
-    public function getAddressById($id) : ?Address{
+    public function getAddressById($id) : array{
         $stmt = $this->database->connect()->prepare(
-            "SELECT * FROM address WHERE id = :id"
+            "SELECT * FROM full_address WHERE id = :id"
         );
         $stmt->bindParam(":id", $id);
         $stmt->execute();
@@ -25,12 +25,7 @@ class AddressRepository extends Repository
 
         if($address == null) return null;
 
-        return new Address(
-                $address['id'],
-                $this->cityRepository->getCityById($address['id']),
-                $address['street'],
-                $address['postal_code']
-        );
+        return $address;
     }
 
 }

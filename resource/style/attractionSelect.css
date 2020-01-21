@@ -1,0 +1,47 @@
+*{
+    font-size: 20px;
+}
+
+.container{
+    padding-top: 7em;
+    padding-bottom: 7em;
+}
+
+.wrapper>button>img{
+    width: 12em;
+    height: 9em;
+}
+
+.information{
+    max-width: 10em;
+    max-height: 10em;
+}
+
+
+@media only screen and (max-width: 1080px){
+    *{
+        font-size: 15px;
+    }
+    .container{
+        padding-bottom: 8em;
+        padding-top: 0;
+    }
+    #aDesc{
+        display: none;
+    }
+    #aName{
+        font-size: 20px;
+    }
+
+    .information{
+        max-width: 10em;
+        min-height: 5em;
+    }
+}
+
+@media screen and (max-device-width: 600px){
+    *{
+        font-size: 25px;
+    }
+
+}

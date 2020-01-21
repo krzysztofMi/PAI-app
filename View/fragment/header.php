@@ -1,5 +1,5 @@
 
-<header class="navbar navbar-expand-lg" id="heder">
+<header class="navbar navbar-expand-lg" id="header">
     <img src="../../resource/img/logo_mini.svg">
     <?php if(!empty($_SESSION)){?>
         <nav>

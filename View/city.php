@@ -12,7 +12,7 @@
         <?php include "fragment/header.php" ?>
             <div class="container">
                 <nav class="cityView">
-                    <p style="text-align: center">Wybierz miasto które cię interesuje</p>
+                    <p class="choose-city-text">Wybierz miasto które cię interesuje</p>
                     <form action="" method="POST">
                         <?php foreach ($cities as $city): ?>
                             <input type="submit" value="<?=$city->getName()?>" class="button-yellow-height" name="cityButton">

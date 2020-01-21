@@ -7,6 +7,7 @@ require_once 'Model/Utils/Messages/RegisterMessage.php';
 class RegistrationController extends ApplicationController {
 
     private $userRepository;
+    private $validator;
 
     public function __construct(){
         parent::__construct();

@@ -1,3 +1,7 @@
+*{
+    font-size: 20px;
+}
+
 .cityView{
     width: 30%;
     margin-right: 5em;
@@ -7,8 +11,64 @@
 .cityView>p{
 }
 
+.choose-city-text{
+    text-align: center;
+}
+
 form>input{
     margin-bottom: 1.5em;
 }
 
+
+@media only screen and (max-width: 1080px){
+    .information{
+        max-width: 25em;
+        max-height: 30em;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-device-width: 600px){
+    *{
+        font-size: 60px;
+    }
+
+    .container{
+        width: 100%;
+        min-width: 100%;
+        align-items: flex-start
+    }
+
+    .information{
+        display: none;
+    }
+    .cityView{
+        margin: 0;
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    .button-yellow-height{
+        font-size: 50px;
+        margin-left: 7em;
+        max-height: 2em;
+    }
+
+    .choose-city-text{
+        text-align: center;
+        min-width: 16em;
+    }
+
+    .button-yellow{
+        max-height: 3em;
+        font-size: 40px;
+        min-width: 10em;
+        margin-left: 7.2em;
+        margin-bottom: 5em;
+    }
+}
 

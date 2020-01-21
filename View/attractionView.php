@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="../resource/style/style.css">
         <link rel="stylesheet" type="text/css" href="../resource/style/attraction.css">
+        <link rel="stylesheet" type="text/css" href="../resource/style/attractionView.css">
     </head>
     <body>
         <?php include "fragment/authorizationUser.php" ?>
@@ -40,19 +41,19 @@
                     </div>
                 </section>
                 <section class="images image-grid" style="grid-template-columns: 0.5fr 0.5fr;">
-                    <img src="../3S/images/attraction/wawel.jpg">
-                    <img src="../3S/images/attraction/wawel.jpg">
-                    <img src="../3S/images/attraction/wawel.jpg">
-                    <img src="../3S/images/attraction/wawel.jpg">
+                    <img class="image" src="../3S/images/attraction/wawel.jpg">
+                    <img class="image" src="../3S/images/attraction/wawel.jpg">
+                    <img class="image" src="../3S/images/attraction/wawel.jpg">
+                    <img class="image" src="../3S/images/attraction/wawel.jpg">
                 </section>
             </div>
             <section class="comment-section">
-                <h2>Dodaj komentarz: </h2>
+                <h3>Dodaj komentarz: </h3>
                 <div style="display:inline;">
                     <form action="?page=attraction/view&comment=add" id="comment-form" method="POST">
                         <input type="hidden" name="user_id" value="<?=$_SESSION['user_id']?>">
                         <input type="hidden" name="attraction_id" value="<?=$attraction['id']?>">
-                        <input type="text" name="content" style="width: 100%;" placeholder="treść ...">
+                        <input id="hello" type="text" name="content" style="width: 100%;" placeholder="treść ...">
                         <input type="submit" value="Dodaj komentarz">
                     </form>
                 </div>

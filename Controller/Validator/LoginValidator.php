@@ -6,6 +6,7 @@ class LoginValidator extends CreditionalsValidator
 {
 
     private const maxSize = 16;
+    private const minSize = 3;
 
     public function __construct(string $login){ $this->creditional = $login; }
 
@@ -14,6 +15,9 @@ class LoginValidator extends CreditionalsValidator
             return false;
         }
         if($this->hasWhitespace()){
+            return false;
+        }
+        if($this->checkIfLonger(self::minSize)){
             return false;
         }
         return true;

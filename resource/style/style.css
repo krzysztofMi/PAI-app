@@ -1,6 +1,6 @@
 
 body{
-    font-size: 50px;
+    font-size: 40px;
     color: #6809B8;
     position: fixed;
     top: 0;
@@ -22,12 +22,13 @@ body{
     background: #FFFF56;
 }
 
-#heder{
+#header{
     border: red;
     background: #FFFF56;
 }
 
 .container{
+    overflow: scroll;
     margin: 0;
     max-width: unset;
     display: flex;
@@ -36,10 +37,16 @@ body{
     height: inherit;
     align-items: center;
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(82,82,82,1) 0%, rgba(69,102,142,1) 0%, rgba(61,114,180,1) 100%);
-    padding-bottom: 1.5em;
+    padding-bottom: 4em;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
 }
 
 .verticalContainer{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
     margin: 0;
     max-width: unset;
     display: flex;
@@ -83,7 +90,12 @@ nav.buttons>a>button{
 }
 
 .button-round{
-    border-radius: 0.6em;
+    border-radius: 2em;
+}
+
+.button-higher{
+    height: 2em;
+    font-size: 40px;
 }
 
 .button-rounder{
@@ -106,7 +118,7 @@ nav.buttons>a>button{
 
 .message{
     color: red;
-    font-size: 2em;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -118,11 +130,12 @@ nav.buttons>a>button{
 
 .information{
     position: relative;
+    width: 100em;
     border-radius: 2em;
     margin-bottom: 1em;
     min-height: 16em;
     min-width: 22em;
-    max-width: 20em;
+    max-width: 35em;
     background: #FFFF56;
     border: solid 2px black;
     word-wrap: break-word;
@@ -135,7 +148,7 @@ nav.buttons>a>button{
 
 @media only screen and (max-width: 1080px){
     body {
-        font-size: 30px;
+        font-size: 20px;
 
     }
     .container {
@@ -156,14 +169,14 @@ nav.buttons>a>button{
 
 @media screen and (max-width: 600px) {
     body {
-        font-size: 28px;
+        font-size: 40px;
     }
     .container {
         flex-direction: column;
-        overflow-y: scroll;
     }
 
     .buttons{
+        font-size: 4em;
         width: 80%;
     }
 
@@ -171,6 +184,7 @@ nav.buttons>a>button{
     .logo > img {
         width: 10em;
     }
+
 }
 
 
@@ -184,7 +198,7 @@ nav.buttons>a>button{
     }
 
     .buttons{
-        width: 80%;
+        width: 100%;
     }
 
     .logo > img {

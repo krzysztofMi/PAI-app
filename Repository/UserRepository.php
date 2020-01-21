@@ -6,9 +6,10 @@ require_once 'Model/User.php';
 class UserRepository extends Repository {
 
     public function saveUser(User $user){
+        $pdo = $this->database->connect();
         try {
-            $this->beginTransaction();
-            $stmt = $this->database->connect()->prepare(
+            $pdo->beginTransaction();
+            $stmt =$pdo->prepare(
                 "INSERT INTO tourismus_user (login, email, password)
                 VALUES(:login, :email, :password);"
             );
@@ -16,10 +17,10 @@ class UserRepository extends Repository {
             $stmt->bindValue(':email', $user->getEmail(), PDO::PARAM_STR);
             $stmt->bindValue(':password', $user->getPassword(), PDO::PARAM_STR);
             $stmt->execute();
-            $this->saveRole($user->getLogin(), $user->getRole());
-            $this->commit();
+            $this->saveRole($user->getLogin(), $user->getRole(), $pdo);
+            $pdo->commit();
         }catch (Exception $e){
-            $this->rollback();
+            $pdo->rollback();
             error_log($e->getMessage());
             $url = "http://$_SERVER[HTTP_HOST]/";
             header("Location: {$url}?page=error&errorCode=500");
@@ -108,9 +109,9 @@ class UserRepository extends Repository {
         return $user;
     }
 
-    private function saveRole($login ,array $roles){
+    private function saveRole($login ,array $roles, MyPdo $pdo){
         foreach($roles as $role){
-            $stmt = $this->database->connect()->prepare(
+            $stmt = $pdo->prepare(
                 "INSERT INTO user_role (user_id, role_id)
                      SELECT u.id, r.id FROM tourismus_user u, role r
                      WHERE u.login = :login and r.role = :role;"

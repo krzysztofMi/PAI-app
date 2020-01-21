@@ -1,0 +1,34 @@
+*{
+    font-size: 23px;
+}
+
+.image{
+    width: 12em;
+    height: 9em;
+}
+
+.verticalContainer{
+    overflow: scroll;
+    padding-bottom: 8em;
+}
+
+.comment-section{
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 1080px){
+    *{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-device-width: 600px){
+    *{
+        font-size: 30px;
+    }
+
+    .image{
+        width: 9em;
+        height: 6em;
+    }
+}

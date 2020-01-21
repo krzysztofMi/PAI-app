@@ -3,17 +3,16 @@
 .image-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1em;
-    margin: 1.5em;
+    grid-gap: 0.5em;
+    margin: 0.5em;
+}
+
+.button-yellow-height{
+    max-height: 5em;
 }
 
 .wrapper>button{
     background: #FFEA00;
-}
-
-.wrapper>button>img{
-    width: 12em;
-    height: 9em;
 }
 
 .attraction-name{
